@@ -9,20 +9,21 @@ function payment() {
     document.querySelector('.valores').style.display = "flex";
 
     if (valorCheckout > 2 && valorCheckout <= 499.99) {
-        valorDesconto = (valorCheckout * 0.10) - valorCheckout;
-        vDesconto.innerText = valorDesconto;
-
-        valorPagar = valorCheckout - (valorCheckout * 0.10);
+        valorPagar = valorCheckout - (valorCheckout * .10);
         vPagar.innerText = parseFloat(valorPagar).toFixed(2);
         bPagar.innerText = parseFloat(valorPagar).toFixed(2);
+
+        valorDesconto = valorPagar - valorCheckout;
+        vDesconto.innerText = valorDesconto;50
 
     } else if (valorCheckout > 499.99) {
-        vDesconto = (valorCheckout) - valorCheckout * 0.15;
-        vDesconto.innerText = valorDesconto;
-
-        valorPagar = valorCheckout - (valorCheckout * 0.15);
+        valorPagar = valorCheckout - (valorCheckout * .15);
         vPagar.innerText = parseFloat(valorPagar).toFixed(2);
         bPagar.innerText = parseFloat(valorPagar).toFixed(2);
+
+        valorDesconto = valorPagar - valorCheckout;
+        vDesconto.innerText = valorDesconto;
+
     } else {
         vDesconto.innerText = "0.00";
         vPagar.innerText = "0.00";

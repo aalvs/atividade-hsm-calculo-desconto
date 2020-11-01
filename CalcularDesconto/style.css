@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --color-verde:  #65a300;
+    --color-verde-h:#a0c662;
+    --color-dark:   #464652;
+    --color-white:  #fff;
+    --color-bg-c:   #eff0f1;
+    --color-border: #ececec;
+    --color-red:    #ef233c;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: var(--color-bg-c);
+}
+
+html, body, input, button {
+    font-family: 'Teko', sans-serif;
+}
+
+.wrapper {
+    height: 100vh;
+    max-width: 1240px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.container {
+    width: 380px;
+    height: fit-content;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 30px rgba(0,0,0,0.08);
+}
+
+div.container h3 {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--color-dark);
+    margin: 32px 0 10px 0;
+}
+
+input.vCheckout {
+    width: 100%;
+    height: 46px;
+    border: 2px solid var(--color-border);
+    border-radius: 4px;
+    outline: none;
+    padding-left: 15px;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+input.vCheckout:hover {
+    border-color: var(--color-verde-h);
+}
+
+input.vCheckout:focus {
+    border-color: var(--color-verde);
+    color: var(--color-dark);
+}
+
+div.valores {
+    display: flex;
+    flex-direction: column;
+}
+
+span:before {
+    content: "R$ ";
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+div.valores {
+    display: none; 
+}
+
+div.valores span.vDesconto {
+    font-size: 20px;
+    color: var(--color-red);
+}
+
+div.valores span.vPagar {
+    font-size: 20px;
+    color: var(--color-verde);
+}
+
+div.boxBtn{
+    margin: 12px 0 32px 0;
+}
+
+button.btnPagar {
+    width: 300px;
+    height: 48px;
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--color-white);
+    background-color: var(--color-verde-h);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}
+
+button.btnPagar:hover {
+    background-color: var(--color-verde);
+    color: var(--color-white);
+}
